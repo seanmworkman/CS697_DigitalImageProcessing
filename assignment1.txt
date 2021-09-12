@@ -1,0 +1,14 @@
+I = imread('pout.tif');
+imshow(I)
+whos
+I2 = I - 40;
+figure, imshow(I2)
+imwrite(I2, 'pout2.png')
+imformats
+imfinfo('pout2.png')
+subplot(1,2,1),imshow(I),title('original image'),
+subplot(1,2,2),imshow(I2),title('processed image');
+impixelinfo;
+[rows cols] = size(I);
+girlImage = imread('pout.tif');
+inverseGirlImage = 255 - girlImage;
